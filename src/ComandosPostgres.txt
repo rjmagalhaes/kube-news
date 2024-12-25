@@ -1,0 +1,1 @@
+docker container run -d -p 5432:5432 --name kube_news_db -e POSTGRES_PASSWORD=Pg123 -e POSTGRES_USER=kubenews -e POSTGRES_DB=kubenews --network kube_news_net --mount type=volume,source=kube_news_vol,target=/var/lib/postgresqldata postgres:12.17
